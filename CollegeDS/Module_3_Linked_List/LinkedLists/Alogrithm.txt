@@ -1,0 +1,93 @@
+ Insertion at the Beginning
+
+Algorithm InsertAtBeginning(head, value)
+1. Create a new node with data = value
+2. Set newNode.next = head
+3. head = newNode
+4. Return head
+2. Insertion at the End
+
+Algorithm InsertAtEnd(head, value)
+1. Create a new node with data = value and next = null
+2. If head is null:
+     head = newNode
+     Return head
+3. temp = head
+4. While temp.next != null:
+     temp = temp.next
+5. temp.next = newNode
+6. Return head
+3. Insertion at a Specific Position
+
+Algorithm InsertAtPosition(head, value, position)
+1. If position == 1:
+     Return InsertAtBeginning(head, value)
+2. Create a new node with data = value
+3. temp = head
+4. Loop from i = 1 to position - 2:
+     temp = temp.next
+     If temp is null:
+         Return error (position out of bounds)
+5. newNode.next = temp.next
+6. temp.next = newNode
+7. Return head
+4. Deletion from the Beginning
+
+Algorithm DeleteFromBeginning(head)
+1. If head is null:
+     Return null
+2. temp = head
+3. head = head.next
+4. Delete temp
+5. Return head
+5. Deletion from the End
+
+Algorithm DeleteFromEnd(head)
+1. If head is null:
+     Return null
+2. If head.next is null:
+     Delete head
+     Return null
+3. temp = head
+4. While temp.next.next != null:
+     temp = temp.next
+5. Delete temp.next
+6. temp.next = null
+7. Return head
+6. Deletion at a Specific Position
+
+Algorithm DeleteAtPosition(head, position)
+1. If position == 1:
+     Return DeleteFromBeginning(head)
+2. temp = head
+3. Loop from i = 1 to position - 2:
+     temp = temp.next
+     If temp is null or temp.next is null:
+         Return error (position out of bounds)
+4. nodeToDelete = temp.next
+5. temp.next = nodeToDelete.next
+6. Delete nodeToDelete
+7. Return head
+7. Search for a Value
+
+Algorithm Search(head, key)
+1. position = 1
+2. temp = head
+3. While temp != null:
+     If temp.data == key:
+         Return position
+     temp = temp.next
+     position = position + 1
+4. Return -1 (not found)
+8. Reverse the Linked List
+
+Algorithm ReverseList(head)
+1. prev = null
+2. curr = head
+3. While curr != null:
+     nextNode = curr.next
+     curr.next = prev
+     prev = curr
+     curr = nextNode
+4. head = prev
+5. Return head

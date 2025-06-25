@@ -1,0 +1,20 @@
+1. p-q-r/a
+
+((p-q)-(r/a))
+(p-q-[ra/])
+([pq-]-[ra/])
+pq-ra/- postfix
+
+((p-q)-(r/a))
+([-pq]-[/ra])
+--pq/ra prefix
+
+2. (m-n)*(p+q)
+
+((m-n)*(p+q))
+([-mn]*[+pq])
+*-mn+pq prefix
+
+((m-n)*(p+q))
+([mn-]*[pq+])
+mn-pq+* postfix
