@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// This is the program for creating binary tree and showing the element of that tree using recusion: 
+// This is the program for creating binary tree and showing the element of that tree using recursion: 
 
 struct Node
 {
@@ -41,19 +41,15 @@ struct Node *createNode(int data)
 //     }
 // }
 
-// void inOrder(struct Node *rootNode)
-// {
-//     if (rootNode != NULL)
-//     {
-//         inOrder(rootNode->left);
-//         printf("%d ", rootNode->data);
-//         inOrder(rootNode->right);
-//     }
-// }
-
-
-
-
+void inOrder(struct Node *rootNode)
+{
+    if (rootNode != NULL)
+    {
+        inOrder(rootNode->left);
+        printf("%d ", rootNode->data);
+        inOrder(rootNode->right);
+    }
+}
 
 int main()
 {
